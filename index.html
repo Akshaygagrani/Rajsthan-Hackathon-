@@ -29,10 +29,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- Supportive-JavaScript -->
 <script src="js/modernizr.js"></script>
 <!-- //Supportive-JavaScript -->
-
-
+<link rel="stylesheet" type="text/css" href="style1.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
+	<body onload="myFunction()" style="margin:0;">
+
+	<div id="loader"></div>
+
+	<div style="display:none;" id="myDiv" class="animate-bottom">
 <!--Header-->
 	<div class="header" id="home">
 		<!--Top-Bar-->
@@ -124,10 +129,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="modal-content">
 									<div class="modal-header">
 										<button type="button" class="close" data-dismiss="modal">&times;</button>
-										<h4>Snow Zone</h4>
+										<h4>Tour Mate</h4>
 										<img src="images/bann2.jpg" alt=" " class="img-responsive">
-										<h5>Lorem Ipsum</h5>
-										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+										<h5>Your tour Assistant</h5>
+										<p>TravelMate makes it easy to get any sort of information on a tourist spot , as it is customized according to a traveller's mind and categorized into states and cities. Not only that , but then the cities are categorized into sights,landmarks,cheap eats,speciality museums,picnic architecture,notable architecture,charming hotels,religious sites,shopping and many more.</p>
 									</div>
 								</div>
 							</div>
@@ -185,7 +190,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</form>
 
 </div>
-
+</div>
 <!--//Header-->
 <!--/about-->
 <div class="w3-aglie-about" id="about">
@@ -543,7 +548,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="col-md-6 w-agile-map">
 				<div class="agileits-map">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387142.8400948023!2d-74.25819082602831!3d40.70583163923578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sin!4v1470295981376" allowfullscreen></iframe>
+					<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCCgEx73HTQxtGehAOk0H4estbcOHIMOJc'></script><div style='overflow:hidden;width:550px;height:550px;'><div id='gmap_canvas' style='width:550px;height:550px;'></div></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:12,center:new google.maps.LatLng(26.880653,75.81152810000003),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(26.880653,75.81152810000003)});infowindow = new google.maps.InfoWindow({content:'<strong>University Rajasthan College</strong><br>Jawahar Lal Nehru Marg, Jhalana Doongri, Jaipur, Rajasthan 302004<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+
 					</div>
 
 			</div>
@@ -559,7 +565,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class=" subscribe-grids">
 			<div class="col-md-4 subscribe-head">
 				<h3>Subscribe now</h3>
-				<p>be the first who knows</p>
 			</div>
 			<div class="col-md-8 subscribe-form">
 					<form action="#" method="post">
@@ -669,6 +674,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
 <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
-
+</div>
 </body>
+
+<script>
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
 </html>
